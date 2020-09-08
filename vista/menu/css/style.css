@@ -1,0 +1,132 @@
+@charset "utf-8";
+/*-------------------------------------------
+  style.css
+  Copyright 2019 Diego Carmona Bernal
+-------------------------------------------*/
+/*-------------------------------------------
+  Inicio | Estructura
+-------------------------------------------*/
+* { margin: 0; padding: 0; line-height: 1.2; }
+
+/**::-webkit-scrollbar { display: none; }*/
+
+::selection { background: #9F9F9F; color: #ffffff; }
+
+::-webkit-selection { background: #9F9F9F; color: #ffffff; }
+
+::-moz-selection { background: #9F9F9F; color: #ffffff; }
+
+body { font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif; background: #E9ECF4; color: #444444; }
+
+body.login { font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif; background: #f8f4f4 url(../images/background-login.jpg) no-repeat center fixed; background-size: cover !important; }
+
+
+/*-------------------------------------------
+  Inicio | Header
+-------------------------------------------*/
+header {
+	width:100%; /* Establecemos que el header abarque el 100% del documento */
+	overflow:hidden; /* Eliminamos errores de float */
+	background:#252932;
+	margin-bottom:20px;
+}
+ 
+.wrapper {
+	width:90%; /* Establecemos que el ancho sera del 90% */
+	max-width:1000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
+	margin:auto; /* Centramos los elementos */
+	overflow:hidden; /* Eliminamos errores de float */
+}
+
+/*-------------------------------------------
+  Inicio | Información Usuario
+-------------------------------------------*/
+.info-school-period { background: rgb(24, 25, 26); position: absolute; top: 0px; left: 0px; height: 105PX; width: 100%;   }
+
+.info-school-period img.image_user {  width: 30px; height: 30px; background: #ffffff;  border-radius: 3em; pointer-events: none; }
+
+.info-school-period .name_user {  height: 100%; width: 16%; cursor: pointer; position:absolute; top: 0px;  left: 84%; float: left; color: #ffffff; font-size:20px; font-weight: bold;  }
+
+.info-school-period .caret {color: #ffffff; position: relative; top: 25px ;  }
+
+.info-school-period .titulo {position: absolute; left: 40%;}
+
+.info-school-period .logout a { display: block; position:absolute; top: 30px; left: 90%; margin: 6px 0 0 10px; text-decoration: none; color: #ffffff; font-size: 0.9em; }
+
+.info-school-period .logout a:hover, .info-school-period.logout a:focus {  color: rgb(92, 187, 250); outline: none; text-decoration: underline; }
+
+.info-school-period .user_active { display: block; position:absolute; top: 10px; left: 98%; margin: -7px 20px 0 0; background: rgb(92, 187, 250); width: 15px; height: 15px; border-radius: 2em; }
+
+.info-school-period .school_period_user { display: block; float: left; margin: 14px 0 14px 20px; color: #ffffff; font-size: 1em; font-weight: bold; text-transform: capitalize; }
+
+.info-school-period .school_period_user a { margin: 14px 0 14px 0px; color: #606060; font-size: 1em; font-weight: bold; text-transform: capitalize; text-decoration: none; }
+
+.info-school-period .school_period_user a:hover, .info-school-period .school_period_user a:focus { color: #538170; outline: none; }
+
+.info-school-period img.menu {width: 50px; position: absolute; top: 20px; cursor: pointer;}
+
+
+/*-------------------------------------------
+  Inicio | Nav Admin
+-------------------------------------------*/
+.nav-admin-home { position: absolute; top: 0px; left: -5px; width: 325px;  bottom: 0; background: #101010; }
+
+.nav-admin-home ul { list-style: none; }
+
+.nav-admin-home img.image_user { display: block; width: 140px; height: 140px; background: #ffffff; margin: 55px auto 15px; border: 4px solid rgb(92, 187, 250); border-radius: 10em; pointer-events: none; }
+
+.nav-admin-home span.name_user { display: block; color: #ffffff; font-size: 1.2em; font-weight: bold; text-align: center; text-transform: capitalize; }
+
+.nav-admin-home ul.first { margin: 30px 0 0 0; padding: 10px 0; list-style: none; border-top: 2px solid rgb(92, 187, 250); border-bottom: 2px solid rgb(92, 187, 250); }
+
+.nav-admin-home ul.second { list-style: none; padding: 10px 0; border-bottom: 2px solid rgb(92, 187, 250); }
+
+.nav-admin-home ul.last { list-style: none; padding: 10px 0; border-bottom: 2px solid rgb(92, 187, 250); }
+
+.nav-admin-home ul li a{ display: block; color: #ffffff; padding: 10px 30px; font-weight: bold; font-size: 0.8em; text-transform: uppercase; text-decoration: none; }
+
+.nav-admin-home ul li a.active{ border-left: 2px solid #ffffff; background:rgb(92, 187, 250); padding: 10px 28px; }
+
+/*-------------------------------------------
+  Inicio | Mensajes
+-------------------------------------------*/
+.wrap-message-info { float: right; margin: 20px 0 0 0; width: 300px; height: 100px; background: url(../images/message.png)#ffffff no-repeat; background-size: 53px; box-shadow: 0 1px 6px rgba(0,0,0,0.1); border-radius: 0.4em; }
+
+.wrap-message-error { float: right; margin: 20px 0 0 0; width: 300px; height: 100px; background: url(../images/message-error.png)#ffffff no-repeat; background-size: 53px; box-shadow: 0 1px 6px rgba(0,0,0,0.1); border-radius: 0.4em; }
+
+.wrap-message-info p, .wrap-message-error p { margin: 28px 35px 0 60px; color: #2b2a2a; font-size: 0.9em; line-height: 1.5em; }
+
+.wrap-message-info .button, .wrap-message-error .button { float: right; margin: 8px 8px 0 0; width: 25px; height: 25px; background: #f2f2f7; color: #b4b3c5; font-weight: bold; font-size: 1.5ex; border: none; border-radius: 2em; cursor: pointer; }
+
+.wrap-message-info .button:hover, .wrap-message-info .button:focus, .wrap-message-error .button:hover, .wrap-message-error .button:focus { background: #b4b3c5; color: #f2f2f7; }
+
+/*-------------------------------------------
+  Formularios
+-------------------------------------------*/
+.content { float: right; margin: 0 0 0 0; width: 970px; }
+
+.content:after { display: block; content: ""; clear: both; }
+
+footer{
+  color: #ffffff;
+  background: blue;
+}
+
+/*-------------------------------------------
+  Formulario Eliminar Registro
+-------------------------------------------*/
+.form-data .delete { margin: 30px 0 0 0; text-align: center; }
+
+.form-data .delete h1 { color: #444444; font-size: 1.8em; font-weight: bold; }
+
+.form-data .delete .btn-si { float: left; margin: 35px 0 37px 150px; width: 80px; height: 45px; background: #e94848; border: solid #aa3535 3px; border-radius: 2em; color: #ffffff; font-size: 1.6em; cursor: pointer; }
+
+.form-data .delete .btn-no{ float: right; margin: 35px 150px 37px 0; width: 80px; height: 45px; background: #3c93a3; border: solid #356694 3px; border-radius: 2em; color: #ffffff; font-size: 1.6em; cursor: pointer; }
+
+.form-data .delete .btn-si:hover, .form-data .delete .btn-si:focus { background: #aa3535; border: solid #e94848 3px; }
+
+.form-data .delete .btn-no:hover, .form-data .delete .btn-no:focus { background: #356694; border: solid #3c93a3 3px; }
+
+
+
+
