@@ -1,8 +1,9 @@
 <?php 
 
     require_once "../../../modelo/Empleado.php";
-
     $datos=array(
+            'imagen' => file_get_contents( $_FILES['imagen'] ['tmp_name']),
+            'tipo_imagen_us' => $_FILES['imagen']['type'],
             'nombre_us' => $_POST['nombre'],
             'apellido_us' => $_POST['apellido'], 
             'documento_us' => $_POST['documento'], 
@@ -12,7 +13,8 @@
             'contrasena' => $_POST['contraseña'],
             'rol' => $_POST['rol'], 
                  );
-
-    echo Crud::insertarDatos($datos);
+    require_once "../../../modelo/Empleado.php";
+    Crud::insertarDatos($datos);
+    
 
  ?>

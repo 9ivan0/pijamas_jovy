@@ -7,6 +7,7 @@ $obj= new Crud();
     $tabla='<table class="table ">
 					<thead>
 						<tr class="font-weight-bold">
+						<td>iMAGEN </td>
 							<td>Nombre </td>
 							<td>Apellidos </td>
 							<td>Documento </td>
@@ -23,6 +24,7 @@ $obj= new Crud();
 
 	foreach ($datos as $key => $value) {
 		$datosTabla=$datosTabla.'<tr>
+								<td><img src="data:image/jpg;base64,'.base64_encode($value['imagen_us']).'"></td>
 								<td>'.$value['nombre_us'].'</td>
 								<td>'.$value['apellido_us'].'</td>
 								<td>'.$value['documento_us'].'</td>

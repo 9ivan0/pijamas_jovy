@@ -121,32 +121,95 @@
 
 .one-half,
 .one-third {
-    position: relative;
-    margin-left: 3%;
-    float: left;
-        margin-bottom: 30px;
- 
-}
- 
-.one-half { width: 45%; }
-.one-third { width: 30.66%; }
- 
-.last {
-    margin-right: 4% !important;
-    clear: right;
+  position: relative;
+  margin-left: 3%;
+  float: left;
+  margin-bottom: 30px;
 }
 
-input{
-    background: none;
-    font-family: 'Poppins', sans-serif;
-    color:#5a5555;
-    font-size: 14px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 333px;
-    border:none;
-    border-bottom: 1px solid var(--colorTextos);
-    resize: none;
+.one-half {
+  width: 45%;
+}
+.one-third {
+  width: 30.66%;
+}
+
+.last {
+  margin-right: 4% !important;
+  clear: right;
+}
+/*imagen*/
+.last {
+  float: left;
+  margin: 15px 25px 5px ;
+}
+.user-image {
+  display: block;
+  position: absolute;
+  width: 216px;
+  height: 216px;
+  border: solid#0586F9 3px;
+  border-radius: 0.4em;
+  pointer-events: none;
+
+}
+.user-image2 {
+  position: absolute;
+  margin: none;
+  padding: 0px 0px 0;
+  width: 210px;
+  height: 182px;
+  pointer-events: none;
+}
+
+.file {
+  display: block;
+  margin: 184px 0 0 0;
+  padding: 7px 12px 0;
+  width: 215px;
+  height: 31px;
+  background: rgb(92, 187, 250);
+  border-radius: 0.2em;
+  color: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+}
+.file:hover {
+  background: solid#0586F9;
+}
+input[type="file"] {
+  width: 0.1px;
+  height: 01px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+label[for=" nuestroinput"] {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #106ba0;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  width: fit-content;
+  text-align: center;
+}
+
+input {
+  background: none;
+  font-family: "Poppins", sans-serif;
+  color: #5a5555;
+  font-size: 14px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 333px;
+  border: none;
+  border-bottom: 1px solid var(--colorTextos);
+  resize: none;
 }
 
 textarea{

@@ -78,24 +78,30 @@ function eliminarDatos(id){
 	});
 }
 
-function insertarDatos(){
+$('#frminsert').submit(function(event) {
+	event.preventDefault();
+	
+	var parametros = new FormData($('#frminsert')[0]);
 	$.ajax({
 		type:"POST",
 		url:"procesos/insertarDatos.php",
-		data:$('#frminsert').serialize(),
-		success:function(r){
-
-			console.log(r);
-			if(r==1){
-				$('#frminsert')[0].reset();//limpiar formulario
-				mostrar();
-				swal("¡Agregado con exito!",":D","success");
-			}else{
-				swal("¡Error!",":(","error");
-			}
-			
-		}
+		data:parametros,
+		contentType:false,
+		processData:false,
+		success:function(info){
+			console.log(parametros);
+			console.log(info);
+			$('#frminsert')[0].reset();//limpiar formulario
+			mostrar();
+			swal("¡Agregado con exito!",":D","success");
+		
+	}
+	, error: function(info){
+		console.log(info);
+		swal("¡Error!",":(","error");
+		console.log(parametros);
+	}
 	});
 
-	return false;
-}
+	
+})

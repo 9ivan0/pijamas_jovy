@@ -11,10 +11,7 @@ if ($_SESSION['id_rol'] < 4) {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 		<title>Pijamas Jovy</title>
-		<link rel="icon" type="image/png" href="images/favicon.ico" />
-		<link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
-		<link rel="stylesheet" href="css/style_icons.css" media="screen, projection" type="text/css" />
-		
+	
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 	</head>
@@ -27,7 +24,7 @@ if ($_SESSION['id_rol'] < 4) {
         </a>
         <ul class="dropdown-menu">
           <li><a href="../../controlador/Logout.php">Cerrar Sesión</a></li>
-          <li><a href="#">Page 1-2</a></li>
+          <li><a href="../editar_datos_personales.php">Page 1-2</a></li>
           <li><a href="#">Page1-3</a></li>
         </ul>
 	  </li>
